@@ -1,0 +1,19 @@
+{
+  "name": "number-convert-to-bangla",
+  "version": "1.0.0",
+  "description": "This package convert numbers to bangla number",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/engrajibulhasan/number-convert-to-bangla.git"
+  },
+  "author": "Md Rajibul Hasan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/engrajibulhasan/number-convert-to-bangla/issues"
+  },
+  "homepage": "https://github.com/engrajibulhasan/number-convert-to-bangla#readme"
+}
