@@ -1,4 +1,4 @@
-function convertNumber(numbers) {
+function bangla(numbers) {
   const toString = numbers.toString();
   const bangla = {
     1: "১",
@@ -22,4 +22,4 @@ function convertNumber(numbers) {
   return toBangla;
 }
 
-module.export = convertNumber;
+module.exports = bangla;

@@ -1,5 +1,5 @@
 {
-  "name": "number-convert-to-bangla",
+  "name": "to-bangla",
   "version": "1.0.0",
   "description": "This package convert numbers to bangla number",
   "main": "index.js",
