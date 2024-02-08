@@ -1,13 +1,28 @@
 # Convert Number To Bangla Number, Word and Date
 
-## How to Install
+## Installation
 
+**number-to-bangla** has been designed for converting English Numbers and Date to Bangla Number and Date
 `npm install number-to-bangla` or
 `npm i number-to-bangla`
 
-## How to Use in Node Project
+## Documentation
 
-After Installing it Import the package
+After Installation Import the Package
+
+**Node JS**
+
+```jsx
+const bn = require("number-to-bangla");
+```
+
+**React JS**
+
+```jsx
+import { bn } from "number-to-bangla";
+```
+
+## Examples
 
 ```jsx
 const bn = require("number-to-bangla");
