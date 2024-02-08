@@ -23,6 +23,7 @@ const banglaNumberMap = {
   0: "০",
   ".": ".",
   "-": "-",
+  "+": "+",
 };
 
 // English to Bangla Word Map

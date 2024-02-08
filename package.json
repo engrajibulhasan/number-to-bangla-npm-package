@@ -1,6 +1,6 @@
 {
   "name": "number-to-bangla",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "This package convert English numbers to Bangla number as well as English number to Bangla Word.",
   "main": "index.js",
   "scripts": {
