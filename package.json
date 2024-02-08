@@ -1,7 +1,7 @@
 {
   "name": "number-to-bangla",
-  "version": "1.0.0",
-  "description": "This package convert numbers to bangla number",
+  "version": "1.0.1",
+  "description": "This package convert English numbers to Bangla number as well as English number to Bangla Word.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,7 +11,9 @@
     "url": "git+https://github.com/engrajibulhasan/number-to-bangla-npm-package.git"
   },
   "keywords": [
-    "number to bangla"
+    "English number to bangla number",
+    "English number to bangla word",
+    "English number to bangla word currency"
   ],
   "author": "Md Rajibul Hasan",
   "license": "ISC",
