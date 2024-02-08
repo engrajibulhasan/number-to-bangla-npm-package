@@ -248,11 +248,12 @@ function toBangla() {
           ? `${firstPart} টাকা এবং ${lastPart} পয়সা`
           : `${firstPart}${DECIMAL} ${lastPart}`;
       }
-      return englishToBanglaWord(number);
+      return currency
+        ? englishToBanglaWord(number) + "টাকা"
+        : englishToBanglaWord(number);
     },
   };
 }
 
 const bn = toBangla();
-console.log(bn.engToWord("123.5001"));
 module.exports = bn;
