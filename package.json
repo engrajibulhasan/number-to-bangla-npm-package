@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/engrajibulhasan/number-convert-to-bangla.git"
+    "url": "git+https://github.com/engrajibulhasan/number-to-bangla-npm-package.git"
   },
   "keywords": [
     "number to bangla"
@@ -16,7 +16,7 @@
   "author": "Md Rajibul Hasan",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/engrajibulhasan/number-convert-to-bangla/issues"
+    "url": "https://github.com/engrajibulhasan/number-to-bangla-npm-package/issues"
   },
-  "homepage": "https://github.com/engrajibulhasan/number-convert-to-bangla#readme"
+  "homepage": "https://github.com/engrajibulhasan/number-to-bangla-npm-package#readme"
 }
