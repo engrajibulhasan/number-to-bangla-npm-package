@@ -1,6 +1,5 @@
-function bangla(numbers) {
-  const toString = numbers.toString();
-  const bangla = {
+function toBangla() {
+  const banglaMap = {
     1: "১",
     2: "২",
     3: "৩",
@@ -13,13 +12,18 @@ function bangla(numbers) {
     0: "০",
   };
 
-  //   English to bangla
-  let toBangla = "";
-  for (let i = 0; i < toString.length; i++) {
-    const element = toString[i];
-    toBangla += bangla[element];
-  }
-  return toBangla;
+  return {
+    //   English to bangla
+    fromEng: (numbers) => {
+      let toString = numbers.toString();
+      let toBangla = "";
+      for (let i = 0; i < toString.length; i++) {
+        const element = toString[i];
+        toBangla += banglaMap[element];
+      }
+      return toBangla;
+    },
+  };
 }
-
-module.exports = bangla;
+const bn = toBangla();
+module.exports = bn;
