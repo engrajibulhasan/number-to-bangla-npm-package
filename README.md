@@ -19,7 +19,7 @@ const bn = require("number-to-bangla");
 **React JS**
 
 ```jsx
-import { bn } from "number-to-bangla";
+import bn from "number-to-bangla";
 ```
 
 ## Examples

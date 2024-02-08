@@ -24,6 +24,8 @@ const banglaNumberMap = {
   ".": ".",
   "-": "-",
   "+": "+",
+  _: "_",
+  "/": "/",
 };
 
 // English to Bangla Word Map
