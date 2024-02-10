@@ -3,8 +3,12 @@
 ## Installation
 
 **number-to-bangla** has been designed for converting English Numbers and Date to Bangla Number and Date
-`npm install number-to-bangla` or
+
+```
+`npm install number-to-bangla`
+or
 `npm i number-to-bangla`
+```
 
 ## Documentation
 
