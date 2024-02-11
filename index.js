@@ -255,6 +255,7 @@ function toBangla() {
         ? englishToBanglaWord(number) + " টাকা"
         : englishToBanglaWord(number);
     },
+    engToDate: (string) => {},
   };
 }
 
