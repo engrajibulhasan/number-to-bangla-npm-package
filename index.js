@@ -252,7 +252,7 @@ function toBangla() {
           : `${firstPart}${DECIMAL} ${lastPart}`;
       }
       return currency
-        ? englishToBanglaWord(number) + "টাকা"
+        ? englishToBanglaWord(number) + " টাকা"
         : englishToBanglaWord(number);
     },
   };
