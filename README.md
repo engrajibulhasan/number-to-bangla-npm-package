@@ -30,7 +30,7 @@ const bn = require("number-to-bangla");
 import bn from "number-to-bangla";
 ```
 
-## Examples Number & Currency
+## Examples For Number & Currency
 
 Check notes below of Examples
 
@@ -62,7 +62,7 @@ bn.engToWord(55.56, true);
 3. Decimal Number 56.523
 4. Support `9007199254740991<= number =>9007199254740991` Range
 
-## Examples Date
+## Examples For Date
 
 You can Pass valid date and string and will get expected resuklt.
 
@@ -90,3 +90,8 @@ bn.engToDate("Friday 12 August 2025 12:06:00 pm");
 bn.engToDate("Friday 12 August 2025 at 12:06:00 pm");
 //Invalid Date or Time (Because of at)
 ```
+
+### Note For Date
+
+1. Do not suppor `RFC 3339` date formats eg. "2024-02-12T12:34:56Z"
+2. Support `ISO 8601:` Date formats as well as Sort and long date formats.
