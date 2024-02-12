@@ -40,43 +40,11 @@ const banglaDateMap = {
   8: "৮",
   9: "৯",
   0: "০",
-  "01": "০১",
-  "02": "০২",
-  "03": "০৩",
-  "04": "০৪",
-  "05": "০৫",
-  "06": "০৬",
-  "07": "০৭",
-  "08": "০৮",
-  "09": "০৯",
-  10: "১০",
-  11: "১১",
-  12: "১২",
-  13: "১৩",
-  14: "১৪",
-  15: "১৫",
-  16: "১৬",
-  17: "১৭",
-  18: "১৮",
-  19: "১৯",
-  20: "২০",
-  21: "২১",
-  22: "২২",
-  23: "২৩",
-  24: "২৪",
-  25: "২৫",
-  26: "২৬",
-  27: "২৭",
-  28: "২৮",
-  29: "২৯",
-  30: "৩০",
-  31: "৩১",
-  ".": ".",
   "-": "-",
-  "+": "+",
   _: "_",
   "/": "/",
   " ": " ",
+  ":": ":",
   january: "জানুয়ারি",
   jan: "জানুয়ারি",
   february: "ফেব্রুয়ারি",
@@ -117,6 +85,8 @@ const banglaDateMap = {
   thurs: "বৃহস্পতি",
   friday: "শুক্রবার",
   fri: "শুক্র",
+  am: "am",
+  pm: "pm",
 };
 
 // English to Bangla Word Map
@@ -327,33 +297,42 @@ const singleNumberToWord = (number) => {
 
 const englishToBanglaDate = (string) => {
   string.trim();
+  const lowerString = string.toLowerCase() + " ";
   let result = "";
-  var regExp = /[a-zA-Z]/g;
+  var regExp = /[a-z]/;
 
   // Direct Match Check
-  if (banglaDateMap[string]) {
-    return banglaDateMap[string];
+  if (banglaDateMap[lowerString]) {
+    return banglaDateMap[lowerString];
   }
   // If it contains words
-  else if (regExp.test(string)) {
+  else if (regExp.test(lowerString)) {
     let charSet = "";
-    for (const char of string) {
-      // Direct Check, if single character exists
-      if (banglaDateMap[char]) {
+
+    for (i = 0; i < lowerString.length; i++) {
+      const char = lowerString[i];
+      // Regx isChar Check
+      if (regExp.test(char)) {
+        charSet += char;
+      } else if (charSet) {
+        if (!banglaDateMap[charSet]) {
+          return "Invalid Date or Time";
+        }
+        result += banglaDateMap[charSet];
+        result += banglaDateMap[char];
+        charSet = "";
+      } else if (banglaDateMap[char]) {
         result += banglaDateMap[char];
       } else {
-        charSet += char;
-        if (banglaDateMap[charSet]) {
-          result += banglaDateMap[charSet];
-          charSet = "";
-        }
+        error.log("Invalid Date or Time");
+        return "Invalid Date or Time";
       }
     }
     return result;
   }
   //Expected Regular Date Format
   else {
-    for (const element of string) {
+    for (const element of lowerString) {
       result += banglaDateMap[element];
     }
     return result;
@@ -388,6 +367,4 @@ function toBangla() {
 }
 
 const bn = toBangla();
-
-console.log(bn.engToDate("saturday 12 jan 2024"));
 module.exports = bn;

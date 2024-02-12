@@ -32,39 +32,61 @@ import bn from "number-to-bangla";
 
 ## Examples Number & Currency
 
+Check notes below of Examples
+
 ```jsx
 const bn = require("number-to-bangla");
 
 // 1. Simple Convert
-const banglaNumber = bn.engToNumber(123456);
-console.log("Simple Bangla Number:", banglaNumber);
-//Simple output Simple Bangla Number: ১২৩৪৫৬
+bn.engToNumber(123456);
+//Output: ১২৩৪৫৬
 
 // 2. To Word Convert
-const banglaWord = bn.engToWord(9999);
-console.log("Simple number to Bangla word: ", banglaWord);
-//Output: Simple number to Bangla word: নয় হাজার নয়শত নিরানব্বই
+bn.engToWord(9999);
+//Output: নয় হাজার নয়শত নিরানব্বই
 
-const banglaWordDecimal = bn.engToWord(123456.9999);
-console.log("Decimal Number to Bangla word: ", banglaWordDecimal);
-//Output: Decimal Number to Bangla word: এক লক্ষ তেইশ হাজার চারশত ছাপ্পান্ন দশমিক নয় নয় নয় নয়
+bn.engToWord(123456.9999);
+//Output: এক লক্ষ তেইশ হাজার চারশত ছাপ্পান্ন দশমিক নয় নয় নয় নয়
 
-const banglaCurrency = bn.engToWord(123456, true);
-console.log("Simple Number to Currency: ", banglaCurrency);
-// Output: Simple Number to Currency:  এক লক্ষ তেইশ হাজার চারশত ছাপ্পান্ন টাকা
+bn.engToWord(123456, true);
+// Output: এক লক্ষ তেইশ হাজার চারশত ছাপ্পান্ন টাকা
 
-const banglaCurrencyDecimal = bn.engToWord(55.56, true);
-console.log("Decimal Number to Currency: ", banglaCurrencyDecimal);
-//Output: Decimal Number to Currency: পঞ্চান্ন টাকা এবং ছাপ্পান্ন পয়সা
+bn.engToWord(55.56, true);
+//Output:  পঞ্চান্ন টাকা এবং ছাপ্পান্ন পয়সা
 ```
 
-## Examples Date
-
-Coming Soon...
-
-### Note: This Package only support
+### Note For Numbers and Currency
 
 1. Plain English Number Eg. 123456
 2. Plain English String Type Number Eg. "123456"
 3. Decimal Number 56.523
-4. Support ** 9007199254740991<= number =>9007199254740991** Range
+4. Support `9007199254740991<= number =>9007199254740991` Range
+
+## Examples Date
+
+You can Pass valid date and string and will get expected resuklt.
+
+```jsx
+const bn = require("number-to-bangla");
+
+bn.engToDate("12/08/2024");
+//১২/০৮/২০২৪
+
+bn.engToDate("12/08/2024");
+//১২/০৮/২০২৪
+
+bn.engToDate("12 Aug 2025");
+//১২ আগস্ট ২০২৫
+
+bn.engToDate("Sat 12 Aug 2025");
+//শনি ১২ আগস্ট ২০২৫
+
+bn.engToDate("Saturday 12 Aug 2025");
+//শনিবার ১২ আগস্ট ২০২৫
+
+bn.engToDate("Friday 12 August 2025 12:06:00 pm");
+//শুক্রবার ১২ আগস্ট ২০২৫ ১২:০৬:০০ pm
+
+bn.engToDate("Friday 12 August 2025 at 12:06:00 pm");
+//Invalid Date or Time (Because of at)
+```

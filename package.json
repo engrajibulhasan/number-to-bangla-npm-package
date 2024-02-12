@@ -1,6 +1,6 @@
 {
   "name": "number-to-bangla",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "This package convert English numbers to Bangla number as well as English number to Bangla Word.",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,8 @@
     "English number to bangla word currency",
     "English to Bangla",
     "Number to Bangla",
-    "Number to Bangla word"
+    "Number to Bangla word",
+    "translate to bangla"
   ],
   "author": "Md Rajibul Hasan",
   "license": "ISC",
