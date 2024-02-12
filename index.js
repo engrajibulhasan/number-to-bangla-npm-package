@@ -323,6 +323,43 @@ const singleNumberToWord = (number) => {
   return result;
 };
 
+// English Date Time  to Bangla Date Time
+
+const englishToBanglaDate = (string) => {
+  string.trim();
+  let result = "";
+  var regExp = /[a-zA-Z]/g;
+
+  // Direct Match Check
+  if (banglaDateMap[string]) {
+    return banglaDateMap[string];
+  }
+  // If it contains words
+  else if (regExp.test(string)) {
+    let charSet = "";
+    for (const char of string) {
+      // Direct Check, if single character exists
+      if (banglaDateMap[char]) {
+        result += banglaDateMap[char];
+      } else {
+        charSet += char;
+        if (banglaDateMap[charSet]) {
+          result += banglaDateMap[charSet];
+          charSet = "";
+        }
+      }
+    }
+    return result;
+  }
+  //Expected Regular Date Format
+  else {
+    for (const element of string) {
+      result += banglaDateMap[element];
+    }
+    return result;
+  }
+};
+
 // Main Function Start
 function toBangla() {
   return {
@@ -346,23 +383,11 @@ function toBangla() {
         ? englishToBanglaWord(number) + " টাকা"
         : englishToBanglaWord(number);
     },
-    engToDate: (string, givenFormat) => {
-      return false;
-      let result = "";
-      var regExp = /[a-zA-Z]/g;
-      if (regExp.test(string)) {
-        console.log("It has regular string");
-      }
-      for (const element of string) {
-        console.log("Element", element);
-        result += banglaDateMap[element];
-      }
-      return result;
-    },
+    engToDate: (string) => englishToBanglaDate(string),
   };
 }
 
 const bn = toBangla();
 
-console.log(bn.engToDate(" 2024"));
+console.log(bn.engToDate("saturday 12 jan 2024"));
 module.exports = bn;
