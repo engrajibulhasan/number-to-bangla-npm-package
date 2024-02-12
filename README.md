@@ -30,7 +30,7 @@ const bn = require("number-to-bangla");
 import bn from "number-to-bangla";
 ```
 
-## Examples
+## Examples Number & Currency
 
 ```jsx
 const bn = require("number-to-bangla");
@@ -57,6 +57,10 @@ const banglaCurrencyDecimal = bn.engToWord(55.56, true);
 console.log("Decimal Number to Currency: ", banglaCurrencyDecimal);
 //Output: Decimal Number to Currency: পঞ্চান্ন টাকা এবং পঞ্চান্ন পয়সা
 ```
+
+## Examples Date
+
+Coming Soon...
 
 ### Note: This Package only support
 

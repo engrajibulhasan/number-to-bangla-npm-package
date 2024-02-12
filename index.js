@@ -28,6 +28,97 @@ const banglaNumberMap = {
   "/": "/",
 };
 
+// English To Bangla Days month Map
+const banglaDateMap = {
+  1: "১",
+  2: "২",
+  3: "৩",
+  4: "৪",
+  5: "৫",
+  6: "৬",
+  7: "৭",
+  8: "৮",
+  9: "৯",
+  0: "০",
+  "01": "০১",
+  "02": "০২",
+  "03": "০৩",
+  "04": "০৪",
+  "05": "০৫",
+  "06": "০৬",
+  "07": "০৭",
+  "08": "০৮",
+  "09": "০৯",
+  10: "১০",
+  11: "১১",
+  12: "১২",
+  13: "১৩",
+  14: "১৪",
+  15: "১৫",
+  16: "১৬",
+  17: "১৭",
+  18: "১৮",
+  19: "১৯",
+  20: "২০",
+  21: "২১",
+  22: "২২",
+  23: "২৩",
+  24: "২৪",
+  25: "২৫",
+  26: "২৬",
+  27: "২৭",
+  28: "২৮",
+  29: "২৯",
+  30: "৩০",
+  31: "৩১",
+  ".": ".",
+  "-": "-",
+  "+": "+",
+  _: "_",
+  "/": "/",
+  " ": " ",
+  january: "জানুয়ারি",
+  jan: "জানুয়ারি",
+  february: "ফেব্রুয়ারি",
+  feb: "ফেব্রুয়ারি",
+  march: "মার্চ",
+  mar: "মার্চ",
+  april: "এপ্রিল",
+  apr: "এপ্রিল",
+  may: "মে",
+  june: "জুন",
+  jun: "জুন",
+  july: "জুলাই",
+  jul: "জুলাই",
+  august: "আগস্ট",
+  aug: "আগস্ট",
+  september: "সেপ্টেম্বর",
+  sept: "সেপ্টেম্বর",
+  sep: "সেপ্টেম্বর",
+  october: "অক্টোবর",
+  oct: "অক্টোবর",
+  november: "নভেম্বর",
+  nove: "নভেম্বর",
+  nov: "নভেম্বর",
+  december: "ডিসেম্বর",
+  dec: "ডিসেম্বর",
+  saturday: "শনিবার",
+  sat: "শনি",
+  sunday: "রবিবার",
+  sun: "রবি",
+  monday: "সোমবার",
+  mon: "সোম",
+  tuesday: "মঙ্গলবার",
+  tues: "মঙ্গল",
+  wednesday: "বুধবার",
+  wed: "বুধ",
+  thursday: "বৃহস্পতিবার",
+  thu: "বৃহস্পতি",
+  thurs: "বৃহস্পতি",
+  friday: "শুক্রবার",
+  fri: "শুক্র",
+};
+
 // English to Bangla Word Map
 const banglaWordMap = {
   0: "শূন্য",
@@ -245,7 +336,7 @@ function toBangla() {
         const apart = numberToString.trim().split(".");
         const firstPart = englishToBanglaWord(apart[0]);
         const lastPart = currency
-          ? englishToBanglaWord(apart[0].slice(0, 2))
+          ? englishToBanglaWord(apart[1].slice(0, 2))
           : singleNumberToWord(apart[1]);
         return currency
           ? `${firstPart} টাকা এবং ${lastPart} পয়সা`
@@ -255,9 +346,23 @@ function toBangla() {
         ? englishToBanglaWord(number) + " টাকা"
         : englishToBanglaWord(number);
     },
-    engToDate: (string) => {},
+    engToDate: (string, givenFormat) => {
+      return false;
+      let result = "";
+      var regExp = /[a-zA-Z]/g;
+      if (regExp.test(string)) {
+        console.log("It has regular string");
+      }
+      for (const element of string) {
+        console.log("Element", element);
+        result += banglaDateMap[element];
+      }
+      return result;
+    },
   };
 }
 
 const bn = toBangla();
+
+console.log(bn.engToDate(" 2024"));
 module.exports = bn;
