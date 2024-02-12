@@ -51,11 +51,11 @@ console.log("Decimal Number to Bangla word: ", banglaWordDecimal);
 
 const banglaCurrency = bn.engToWord(123456, true);
 console.log("Simple Number to Currency: ", banglaCurrency);
-// Output: Simple Number to Currency:  এক লক্ষ তেইশ হাজার চারশত ছাপ্পান্নটাকা
+// Output: Simple Number to Currency:  এক লক্ষ তেইশ হাজার চারশত ছাপ্পান্ন টাকা
 
 const banglaCurrencyDecimal = bn.engToWord(55.56, true);
 console.log("Decimal Number to Currency: ", banglaCurrencyDecimal);
-//Output: Decimal Number to Currency: পঞ্চান্ন টাকা এবং পঞ্চান্ন পয়সা
+//Output: Decimal Number to Currency: পঞ্চান্ন টাকা এবং ছাপ্পান্ন পয়সা
 ```
 
 ## Examples Date
