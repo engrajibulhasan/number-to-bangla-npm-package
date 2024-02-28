@@ -1,7 +1,8 @@
 {
   "name": "number-to-bangla",
-  "version": "1.0.6",
-  "description": "This package convert English numbers to Bangla number as well as English number to Bangla Word.",
+  "homepage": "https://github.com/engrajibulhasan/number-to-bangla-npm-package#readme",
+  "version": "1.0.7",
+  "description": "This package convert English numbers & date to Bangla number, currency, word and date.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,18 +12,17 @@
     "url": "git+https://github.com/engrajibulhasan/number-to-bangla-npm-package.git"
   },
   "keywords": [
-    "English number to bangla number",
-    "English number to bangla word",
-    "English number to bangla word currency",
-    "English to Bangla",
-    "Number to Bangla",
-    "Number to Bangla word",
+    "english to bangla",
+    "english to bangla number",
+    "number to bangla word",
+    "bangla word currency",
+    "number to Bangla",
+    "to bangla date and time",
     "translate to bangla"
   ],
   "author": "Md Rajibul Hasan",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/engrajibulhasan/number-to-bangla-npm-package/issues"
-  },
-  "homepage": "https://github.com/engrajibulhasan/number-to-bangla-npm-package#readme"
+  }
 }
